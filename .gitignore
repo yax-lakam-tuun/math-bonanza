@@ -2,4 +2,6 @@
 *.aux
 *.pdf
 *.fdb_latexmk
+*.gz
+*.fls
 .vscode/
