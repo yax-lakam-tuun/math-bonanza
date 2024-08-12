@@ -1,0 +1,63 @@
+\chapter{Spherical trigonometry}
+
+All angles are in radians if not stated otherwise.
+
+\begin{definition}[Great circle]
+    Given a sphere with radius $r$, a great circle is a circle on the sphere's surface
+    whose center coincides with the center of the sphere.
+\end{definition}
+
+\begin{theorem}[Two great circles intersect at two opposing points]
+   Given a sphere with radius $r$ with its center $M$ and two great circles defined by 
+   non-diametral surface points $A$ and $B$ and $P$, $Q$ respectively, both circles intersect at
+   diametrically opposite points $X$ and $Y$.
+   The line $\overline{XY}$ passes through the sphere's center $M$.
+\end{theorem}
+\begin{proof}
+   Let $E_1$ define the plane for $A$, $B$ and $M$ and let $E_2$ define the place $P$, $Q$ and $M$.
+   Both planes intersect since they have a common point $M$.
+   The intersection is always a line which trivially runs through $M$ and pierces the sphere
+   in two opposing points.
+\end{proof}
+
+\begin{definition}[Lune]
+    Given a sphere with radius $r$, a lune, also called a digon, is the set of points bound
+    by the intersection of two great circles.
+    A lune is usually characterized by the internal angle both great circles shape.
+    The word `lune' is derived from the Latin word \emph{luna} for moon.
+\end{definition}
+
+\begin{corollary}
+    When two great circles intersect, one actually gets four lunes.
+    The opposing lunes have the same internal angle $\phi$ and $\theta$ and $\phi+\theta$ 
+    is always $2 \pi$.
+\end{corollary}
+
+\begin{lemma}
+    Given a sphere with radius $r$, the area of a lune with internal angle $\phi$ 
+    can be calculated with the following equation: $A = 2r^2\phi$.
+\end{lemma}
+
+\begin{proof}
+    A lune covering a half-sphere has an internal angle of $\pi$.
+    Since the sphere has a surface of $A=4 \pi r^2$, a half-sphere lune has an area of $2 \pi r^2$.
+    A quarter-sphere has a surface of $A=\pi r^2$. And so on.
+    The relationship between a lune's internal angle $\phi$ and its area has a linear relationship
+    and can be written as:
+    \begin{equation}
+        A = 4 \pi r^2 \frac{\phi}{2\pi} = 2 r^2 \phi
+    \end{equation}
+\end{proof}
+
+\begin{definition}[Spherical triangle (Euler triangle)]
+    Given a sphere with radius \emph{r} and three points $P$, $Q$, and $R$ on the sphere's surface 
+    which do not reside on one single great circle, these three points span three 
+    different great circles namely $PQ$, $PR$ and $QR$.
+    Therefore, there are six intersection points $A$, $B$, $C$, $A'$, $B'$ and $C'$.
+    The points $A'$, $B'$ and $C'$ represent the counterparts of $A$, $B$ and $C$.
+    An angle inside a spherical triangle corresponds to the angle created by both tangents 
+    at the vertex or the angle between the planes of the great circles respectively.
+    Without any further restriction, there would be many possible combinations of triangles.
+    Euler triangles demand: $\alpha, \beta, \gamma \le \pi$.
+    Then, one gets two opposing spherical triangles.
+\end{definition}
