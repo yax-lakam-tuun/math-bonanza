@@ -61,7 +61,7 @@
     \end{equation}
     Since 
     \begin{equation}
-        2^{n+1} \ge 2^n+i \Rightarrow \frac{1}{2^n+i} \ge \frac{1}{2^{n+1}} \forall i \in \left[1...2^n\right], n \in \mathbb{N}
+        2^{n+1} \ge 2^n+i \Rightarrow \frac{1}{2^n+i} \ge \frac{1}{2^{n+1}} \quad \forall i \in \left[1...2^n\right], n \in \mathbb{N}
     \end{equation}
     one can conclude:
     \begin{equation}
@@ -75,5 +75,76 @@
     Therefore, the harmonic series is also divergent:
     \begin{equation}
         \sum_{n=1}^{\infty}\frac{1}{n} = 1 + \sum_{n=2}^{\infty}\frac{1}{n} \to \infty
+    \end{equation}
+\end{proof}
+
+\begin{definition}[Geometric series]
+    The geometric series is defined:
+    \begin{equation}
+        \sum_{i=0}^{n}q^i = 1 + q + q^2 + q^3 + ... + q^n
+    \end{equation}
+\end{definition}
+
+\begin{lemma}
+    \begin{equation}
+        \sum_{i=0}^{n}q^i = \frac{q^{n+1}-1}{q-1} = \frac{1-q^{n+1}}{1-q}
+    \end{equation}
+\end{lemma}
+\begin{proof}
+    Proof is given by mathematical induction.
+
+    \emph{Base case:} For n = 1 that's clearly true.
+    \begin{equation}
+        \sum_{i=0}^{1}q^i = 1 + q = \frac{1-q^2}{1-q} = \frac{(1-q)(1q1)}{1-q} = 1 + q 
+    \end{equation}
+    
+    \emph{Induction requirement}: The equation is valid for n.
+
+    \emph{Induction step:} 
+    \begin{equation}
+        \begin{split}
+            \sum_{i=0}^{n+1}q^i & = q^{n+1} + \sum_{i=0}^{n}q^i \\
+                                & = q^{n+1} + \frac{1 - q^{n+1}}{1-q} \\
+                                & = \frac{q^{n+1}(1-q) + 1 - q^{n+1}}{1-q} \\
+                                & = \frac{q^{n+1} - q^{n+2} + 1 - q^{n+1}}{1-q} \\
+                                & = \frac{1 - q^{n+2}}{1-q}
+        \end{split}
+    \end{equation}
+\end{proof}
+
+\begin{lemma}
+    Let $|q| < 1$, then
+    \begin{equation}
+        \lim_{n \to \infty}\sum_{i=0}^{n}q^i = \frac{1}{1-q}
+    \end{equation}
+\end{lemma}
+\begin{proof}
+    An important step is to show is $\lim_{n \to \infty}q^n = 0$.
+    To do that, the following relation has to be proven $|q|^{n} < |q|^{n-1}$.
+    This can be achieved by mathematical induction.
+
+    \emph{Base case:} For n = 1 that's clearly true since this part of prerequisites.
+    \begin{equation}
+        |q|^1 = |q| < 1 = |q|^0
+    \end{equation}
+
+    \emph{Induction requirement}: The equation is valid for n.
+
+    \emph{Induction step:} 
+    \begin{equation}
+        |q|^{n+1} = |q|^n * q < |q|^{n-1} * q = |q|^n 
+    \end{equation}
+    Let $\epsilon = |q|^n|$, then
+    \begin{equation}
+        |q^{n+1}-0| = |q^{n+1}| < |q|^n = \epsilon \quad \forall n \in \mathbb{N}
+    \end{equation}
+    So, $q^n$ converges according to Cauchy's convergence test and 
+    thus $\lim_{n \to \infty}q^n = 0$.
+
+    Then, the geometric series converges as-well.
+    \begin{equation}
+        \lim_{n \to \infty}\sum_{i=0}^{n}q^i = \lim_{n \to \infty}\frac{1-q^{n+1}}{1-q}
+                                             = \frac{1-0}{1-q}
+                                             = \frac{1}{1-q}
     \end{equation}
 \end{proof}
