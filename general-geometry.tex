@@ -1,0 +1,39 @@
+\chapter{General geometry}
+
+\begin{theorem}[Triangle inequality in $\mathbb{R}$]
+    Let $a, b \in \mathbb{R}$, then the triangle inequality is defined:
+    \begin{equation}
+        |a + b| \le |a| + |b|
+    \end{equation}
+\end{theorem}
+\begin{proof}
+    Obviously: $|a| \ge a \wedge |b| \ge b \quad \forall a, b \in \mathbb{R}$
+    
+    Then, there two cases to consider, namely $a+b>0$ and $a+b<0$.
+
+    \emph{Case $a+b>0$:}
+    \begin{equation}
+        |a + b| = a + b \le |a| + |b|
+    \end{equation}
+
+    \emph{Case $a+b<0$:}
+    \begin{equation}
+        |a + b| = -(a + b) = (-a) + (-b) \le |a| + |b|
+    \end{equation}
+\end{proof}
+
+\begin{theorem}[Triangle inequality in $\mathbb{R}^n$]
+    Let $a, b \in \mathbb{R}^n$, then the triangle inequality is defined:
+    \begin{equation}
+        |a + b| \le |a| + |b|
+    \end{equation}
+\end{theorem}
+\begin{proof}
+    The scalar product has the following property: $\langle a,b \rangle = |a||b|\cos(\sphericalangle a,b) \le |a||b|$
+    \begin{equation}
+        |a + b|^2 = \langle a+b,a+b \rangle 
+                  = \langle a,a \rangle + 2 \langle a,b \rangle + \langle b,b \rangle
+                  = |a|^2 + 2 \langle a,b \rangle + |b|^2
+                  \le |a|^2 + |b|^2
+    \end{equation}
+\end{proof}
