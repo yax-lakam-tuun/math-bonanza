@@ -1,5 +1,22 @@
 \chapter{Sequences and series}
 
+\begin{definition}[Sequence]
+    A sequence $a_n$ assigns each natural number $n$ a value of the codomain or destination set X.
+    \begin{equation}
+        a:\mathbb{N} \rightarrow \mathbb{X}
+    \end{equation}
+    The start index can vary. Sometimes the indices start with zero where appropriate.
+\end{definition}
+
+\begin{theorem}[Cauchy's convergence test]
+    Let $a_n$ be a sequence. 
+    $a_n$ converges to a given limit $a$ if for a given \emph{arbitrary} $n_0 \in \mathbb{N}$ 
+    there is an $\epsilon>0$, so that:
+    \begin{equation}
+        |a_n - a| < \epsilon \quad \forall n > n_0, n \in \mathbb{N}
+    \end{equation}
+\end{theorem}
+
 \begin{definition}[Harmonic series]
     The harmonic series is the sum of all fractions.
     \begin{equation}
