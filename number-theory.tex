@@ -1,0 +1,64 @@
+\chapter{Number theory}
+
+\begin{definition}[Natural numbers]
+    Natural numbers is the set of all positive integers.
+    The symbol \N{} is used to denote them.
+    The set can be expressed as
+    \begin{equation}
+        \N = \{1,2,3,4,5,... \}
+    \end{equation}
+    The number is zero is not part of the natural numbers.
+    All positive integers including zero is denoted by \Nzero{} and can be expressed as
+    \begin{equation}
+        \Nzero = \N \cup \{0\} = \{0, 1,2,3,4,5,... \}
+    \end{equation}
+\end{definition}
+
+\begin{definition}[Integers]
+    Integers are the set of all positive natural numbers, negative numbers and the number zero.
+    The symbol \Z{} is used to denote them.
+    \begin{equation}
+        \Z = \{...,-3,-2,-1,0,1,2,3,... \}
+    \end{equation}
+\end{definition}
+
+\begin{definition}[Rational numbers]
+    Rational numbers is the set of all fractions.
+    The symbol \Q{} is used to denote them.
+    A rational number $a \in \Q$ can be expressed by a fraction with 
+    two integers $p,q \in \Q$.
+    \begin{equation}
+        a = \frac{p}{q} \quad q \ne 0
+    \end{equation}
+\end{definition}
+
+\begin{lemma}
+    $N \subset \Nzero \subset \Z \subset \Q$
+\end{lemma}
+\begin{proof}
+    Since \Z{} is defined as all integers it also includes all positive integers \N{} and 
+    number zero.
+    The set \Q{} contains all possible fractions, so it also includes fractions with denominator $1$
+    \begin{equation}
+        a = \frac{p}{q} = \frac{p}{1} = p \quad p \in \Nzero, q = 1
+    \end{equation}
+\end{proof}
+
+\begin{lemma}
+    $\sqrt(2) \notin \Q$.
+\end{lemma}
+\begin{proof}
+    Assume $\sqrt{2} \in \Q$:
+    Then, there are two integers $p,q \in \Z$, so that fraction $\frac{p}{q}$ 
+    can no longer be shortened.
+    Now, every integer $a$ can be expressed by 
+    \begin{equation}
+        a = 2^k b \quad k \in \Nzero, b \in Z \implies a^2 = (2^k b)^2 = 2^{2k} b^2
+    \end{equation}
+    So, every squared integer has an even number of 2s.
+    However, $2 q^2 = p^2$ implies $p^2$ has odd number of 2s which contradicts the statement 
+    that every squared integer has an even number of 2s.
+    \begin{equation}
+        2 q^2 = p^2 \implies p^2 = 2^{2k+1} b \quad \blitz  \quad k \in \Nzero, b \in \Z
+    \end{equation}
+\end{proof}
