@@ -3,17 +3,17 @@
 \begin{definition}[Sequence]
     A sequence $a_n$ assigns each natural number $n$ a value of the codomain or destination set X.
     \begin{equation}
-        a:\mathbb{N} \rightarrow \mathbb{X}
+        a:\N \rightarrow \mathbb{X}
     \end{equation}
     The start index can vary. Sometimes the indices start with zero where appropriate.
 \end{definition}
 
 \begin{definition}[Limit of a sequence]
     Let $a_n$ be a sequence. 
-    $a_n$ converges to a given limit $a$ if for a given \emph{arbitrary} $n_0 \in \mathbb{N}$ 
+    $a_n$ converges to a given limit $a$ if for a given \emph{arbitrary} $n_0 \in \N$ 
     there is an $\epsilon>0$, so that:
     \begin{equation}
-        |a_n - a| < \epsilon \quad \forall n \ge n_0, n \in \mathbb{N}
+        |a_n - a| < \epsilon \quad \forall n \ge n_0, n \in \N
     \end{equation}
     For this test the limit $a$ has to be known.
 \end{definition}
@@ -79,7 +79,7 @@
     \end{equation}
     Since 
     \begin{equation}
-        2^{n+1} \ge 2^n+i \Rightarrow \frac{1}{2^n+i} \ge \frac{1}{2^{n+1}} \quad \forall i \in \left[1...2^n\right], n \in \mathbb{N}
+        2^{n+1} \ge 2^n+i \Rightarrow \frac{1}{2^n+i} \ge \frac{1}{2^{n+1}} \quad \forall i \in \left[1...2^n\right], n \in \N
     \end{equation}
     one can conclude:
     \begin{equation}
@@ -154,7 +154,7 @@
     \end{equation}
     Let $\epsilon = |q|^n|$, then
     \begin{equation}
-        |q^{n+1}-0| = |q^{n+1}| < |q|^n = \epsilon \quad \forall n \in \mathbb{N}
+        |q^{n+1}-0| = |q^{n+1}| < |q|^n = \epsilon \quad \forall n \in \N
     \end{equation}
     So, $q^n$ converges according to Cauchy's convergence test and 
     thus $\lim_{n \to \infty}q^n = 0$.
