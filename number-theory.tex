@@ -45,7 +45,7 @@
 \end{proof}
 
 \begin{lemma}
-    $\sqrt(2) \notin \Q$.
+    $\sqrt{2} \notin \Q$.
 \end{lemma}
 \begin{proof}
     Assume $\sqrt{2} \in \Q$:
@@ -62,3 +62,35 @@
         2 q^2 = p^2 \implies p^2 = 2^{2k+1} b \quad \blitz  \quad k \in \Nzero, b \in \Z
     \end{equation}
 \end{proof}
+\begin{corollary}
+    Since $\sqrt{2} \notin \Q$, there is obviously a set of infinite numbers which are not part of 
+    \Q{} and therefore, \Q{} is not complete.
+\end{corollary}
+\begin{proof}
+    It is possible to construct similar numbers like $\sqrt{2}$ and create a contradiction to show
+    that they are not part of the rational numbers.
+
+    For example,
+    \begin{equation}
+        \sqrt[2]{3} = \frac{p}{q} \quad p,q \in \Q, q \ne 0 \implies 3 q^2 = p^2 \implies p^2 
+    \end{equation}
+    Every integer $a$ can be expressed by 
+    \begin{equation}
+        a = 3^k b \quad k \in \Nzero, b \in Z \implies a^2 = (3^k b)^2 = 3^{2k} b^2
+    \end{equation}
+    Then, the contradiction is:
+    \begin{equation}
+        3 q^2 = p^2 \implies p^2 = 3^{3k+1} b \quad \blitz  \quad k \in \Nzero, b \in \Z
+    \end{equation}
+\end{proof}
+
+\begin{definition}[Irrational numbers]
+    As one can see, the set of rational numbers do not cover all possible numbers.
+    Therefore, numbers which are not in \Q{} and are called irrational numbers.
+\end{definition}
+
+\begin{definition}[Real numbers]
+    Reel numbers is the set of all numbers rational and irrational numbers.
+    The symbol \R{} is used to denote them.
+\end{definition}
+
