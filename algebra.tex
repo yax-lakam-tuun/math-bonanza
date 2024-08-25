@@ -1,0 +1,85 @@
+\chapter{Algebra}
+
+\begin{definition}[Floor and ceiling]
+    Let $x \in \R$, then choose $m,n \in \Z$ so that:
+    \begin{equation}
+        m \le x < m + 1 \quad \land \quad n - 1 < x \le n
+    \end{equation}
+    Then, floor and ceiling functions are defined as 
+    $\lfloor x \rfloor = m$ and 
+    $\lceil x \rceil = n$.
+\end{definition}
+
+\begin{corollary}
+    Properties of floor and ceiling:
+    \begin{itemize}
+        \item $\lfloor \lfloor x \rfloor \rfloor = \lfloor x \rfloor$
+        \item $\lceil \lceil x \rceil \rceil = \lceil x \rceil$
+        \item $\lfloor x + k \rfloor = \lfloor x \rfloor + k \quad k \in \Z$
+        \item $\lceil x + k \rceil = \lceil x \rceil + k \quad k \in \Z$
+    \end{itemize}
+\end{corollary}
+\begin{proof}
+    It is sufficient to proof just one function, the other is analogous.
+    \begin{enumerate}
+        \item $\lfloor \lfloor x \rfloor \rfloor = \lfloor x \rfloor$ \\
+            Let $x \in \R$ and $\lfloor x \rfloor = m$.
+            Then, let $n \in \Z$, so that $\lfloor m \rfloor = n$:
+            \begin{equation}
+                n \le m < n+1
+            \end{equation}
+            The definition of ceiling function states, that it represents the integer closest, 
+            but smaller than the given argument.
+            \begin{equation}
+                m \in \Z \quad \land \quad n \le m \implies n=m \quad \lor \quad n=m-1
+            \end{equation}
+            However, $n=m-1$ is invalid:
+            \begin{equation}
+                n \le m < n+1 \Leftrightarrow n-1 \le m < n \quad \blitz
+            \end{equation}
+            So, $n=m \implies \lfloor \lfloor x \rfloor \rfloor = \lfloor x \rfloor$
+
+        \item $\lfloor x + k \rfloor = \lfloor x \rfloor + k \quad k \in \Z$ \\
+            Let $\lfloor x \rfloor = n$, then:
+            \begin{align*}
+                                & n \le x < n+1 \\
+                \Leftrightarrow \quad & n+k \le x+k < n+k+1 \\
+                \Leftrightarrow \quad  & \lfloor x \rfloor + k \le x+k < \lfloor x \rfloor + k+1 \\
+                \Leftrightarrow \quad  & \lfloor x + k \rfloor = \lfloor x \rfloor + k
+            \end{align*}
+    \end{enumerate}
+\end{proof}
+
+\begin{definition}[Modulo]
+    Let $a \in \Z, n \in \N$:
+    \begin{equation}
+        a \mod n = a - \left\lfloor \frac{a}{n} \right\rfloor n
+    \end{equation}
+\end{definition}
+
+\begin{corollary}
+    Properties of modulo arithmetic. Let $a,b \in \Z$ and $n \in \N$
+    \begin{itemize}
+        \item $(a + b) \mod n = ((a \mod n) + (b \mod n)) \mod n$
+        \item $(a - b) \mod n = ((a \mod n) - (b \mod n)) \mod n$
+    \end{itemize}
+\end{corollary}
+\begin{proof}
+    It is sufficient to proof just one relation, the other is analogous.
+    \begin{align*}
+        & ((a \text{ mod } n) + (b \text{ mod } n)) \text{ mod } n \\
+            = \quad & a - \left\lfloor \frac{a}{n} \right\rfloor n + b - \left\lfloor \frac{b}{n} \right\rfloor n - 
+                \left\lfloor \frac{a - \left\lfloor \frac{a}{n} \right\rfloor n + b - \left\lfloor \frac{b}{n} \right\rfloor n}{n} \right\rfloor n\\
+            = \quad & a + b - \left(\left\lfloor \frac{a}{n} \right\rfloor + \left\lfloor \frac{b}{n} \right\rfloor\right)n - 
+                \left\lfloor \frac{a - \left\lfloor \frac{a}{n} \right\rfloor n + b - \left\lfloor \frac{b}{n} \right\rfloor n}{n} \right\rfloor n\\ 
+            = \quad & a + b - \left(\left\lfloor \frac{a}{n} \right\rfloor + \left\lfloor \frac{b}{n} \right\rfloor - 
+                \left\lfloor \frac{a - \left\lfloor \frac{a}{n} \right\rfloor n + b - \left\lfloor \frac{b}{n} \right\rfloor n}{n} \right\rfloor\right) n\\ 
+            = \quad & a + b - \left(\left\lfloor \left\lfloor \frac{a}{n} \right\rfloor + \left\lfloor \frac{b}{n} \right\rfloor - 
+                \frac{a - \left\lfloor \frac{a}{n} \right\rfloor n + b - \left\lfloor \frac{b}{n} \right\rfloor n}{n} \right\rfloor\right) n\\
+            = \quad & a + b - \left(\left\lfloor
+                \frac{\left\lfloor \frac{a}{n} \right\rfloor n + \left\lfloor \frac{b}{n} \right\rfloor n + a - \left\lfloor \frac{a}{n} \right\rfloor n + b - \left\lfloor \frac{b}{n} \right\rfloor n}
+                     {n} \right\rfloor\right) n\\  
+            = \quad & a + b - \left(\left\lfloor\frac{a + b}{n} \right\rfloor\right) n\\  
+            = \quad & (a + b) \mod n  
+    \end{align*}
+\end{proof}
