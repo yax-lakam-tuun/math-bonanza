@@ -1,5 +1,106 @@
 \chapter{Algebra}
 
+\begin{definition}[Groupoid]
+    A groupoid is a pair consisting of a set $S$ and a binary operation $*$.
+    The binary operation is defined:
+    \begin{equation}
+        *: S \times S \rightarrow S \quad \forall a,b \in S: a * b \in S
+    \end{equation}
+\end{definition}
+
+\begin{definition}[Semigroup]
+    A semigroup is a groupoid with a set $S$ and a binary operation $*$.
+    Its elements follow the law of associativity.
+    It has the following properties:
+    \begin{enumerate}
+        \item The binary operation is defined:
+            \begin{equation}
+                *: S \times S \rightarrow S \quad \forall a,b \in S: a * b \in S
+            \end{equation}
+        \item Associative:
+            \begin{equation}
+                \forall a,b,c \in S: a * (b * c) = (a * b) * c
+            \end{equation} 
+    \end{enumerate}
+\end{definition}
+
+\begin{definition}[Monoid]
+    A monoid is a triple $(S, *, e)$ consisting of a set $S$, a binary operation $*$ and 
+    a neutral element $e \in S$.
+    It is also a groupoid and has the following properties:
+    \begin{enumerate}
+        \item The binary operation is defined:
+            \begin{equation}
+                *: S \times S \rightarrow S \quad \forall a,b \in S: a * b \in S
+            \end{equation}
+        \item Associative:
+            \begin{equation}
+                \forall a,b,c \in S: a * (b * c) = (a * b) * c
+            \end{equation} 
+        \item The neutral element $e \in S$:
+            \begin{equation}
+                \forall a \in S: a * e = e * a = a
+            \end{equation}
+    \end{enumerate}
+\end{definition}
+
+\begin{definition}[Group]
+    A group is a monoid with triple $(S, *, e)$ consisting of a set $S$, a binary operation $*$ and 
+    a neutral element $e \in S$.
+    For each element there is an ``inverse''.
+    A group has the following properties:
+    \begin{enumerate}
+        \item The binary operation is defined:
+            \begin{equation}
+                *: S \times S \rightarrow S \quad \forall a,b \in S: a * b \in S
+            \end{equation}
+        \item Associative:
+            \begin{equation}
+                \forall a,b,c \in S: a * (b * c) = (a * b) * c
+            \end{equation} 
+        \item The neutral element $e \in S$:
+            \begin{equation}
+                \forall a \in S: a * e = e * a = a
+            \end{equation}
+        \item The inverse element:
+            \begin{equation}
+                \forall a \in S: \exists a': a * a' = e
+            \end{equation}
+        \item If a group also commutative, it is called an Abelian group:
+        \begin{equation}
+            \forall a,b \in S: a * b = b * a
+        \end{equation}
+    \end{enumerate}
+\end{definition}
+
+\begin{definition}[Ring]
+    A ring $R$ consists of a set $S$ and two binary operations $+$ and $*$.
+    It has the following properties:
+    \begin{enumerate}
+        \item $R(S,+)$ is an Abelian group.
+        \item $R(S,*)$ is a semigroup.
+        \item Distributive:
+            \begin{equation}
+                \forall a,b,c \in S: a * (b + c) = a * b + a * c
+            \end{equation}
+    \end{enumerate}
+    The operator * is usually omitted, e.g. $a (b + c) = ab + ac$.
+\end{definition}
+
+\begin{definition}[Field]
+    A field $F$ consists of a set $S$ and two binary operations $+$ and $*$.
+    It has the following properties:
+    \begin{enumerate}
+        \item $F(S,+)$ is an Abelian group. Element ``0'' is the neutral element.
+        \item $F(S\setminus\{0\},*)$ is an Abelian group. Element ``1'' is the neutral element.
+        \item Distributive:
+            \begin{equation}
+                \forall a,b,c \in S: a * (b + c) = a * b + a * c
+            \end{equation}
+    \end{enumerate}
+    The operator * is usually omitted, e.g. $a (b + c) = ab + ac$.
+\end{definition}
+
 \begin{definition}[Floor and ceiling]
     Let $x \in \R$, then choose $m,n \in \Z$ so that:
     \begin{equation}
