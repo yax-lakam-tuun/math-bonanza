@@ -165,3 +165,32 @@
                                              = \frac{1}{1-q}
     \end{equation}
 \end{proof}
+
+\begin{lemma}
+    \begin{equation}
+        \sum_{i=1}^{n} = \frac{n(n+1)(2n+1)}{6}
+    \end{equation}
+\end{lemma}
+\begin{proof}
+    Proof is given by mathematical induction.
+    
+    \emph{Base case:} For n = 1 that's clearly true.
+    \begin{equation}
+        \sum_{i=1}^{1}i^2 = 1 = \frac{1*(1+1)*(2*1+1)}{6} = \frac{2*3}{6} = 1
+    \end{equation}
+
+    \emph{Induction requirement}: The equation is valid for n.
+
+    \emph{Induction step:} 
+    \begin{equation}
+        \begin{split}
+            \sum_{i=1}^{n+1}i^2 & = \sum_{i=1}^{n}i^2 + (n+1)^2 \\
+                                & = \frac{n(n+1)(2n+1)}{6} + (n+1)^2 \\
+                                & = \frac{n(n+1)(2n+1) + 6(n+1)^2}{6}  \\
+                                & = \frac{(n+1)(n(2n+1) + 6(n+1))}{6}  \\
+                                & = \frac{(n+1)(2n^2+7n + 6)}{6} = \frac{(n+1)(2n^2+3n+4n+6)}{6} \\
+                                & = \frac{(n+1)(n+2)(2n+3)}{6}  \\
+                                & = \frac{(n+1)(n+2)(2(n+1)+1)}{6}
+        \end{split}
+    \end{equation}
+\end{proof}
