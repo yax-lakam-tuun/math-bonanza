@@ -94,3 +94,18 @@
     The symbol \R{} is used to denote them.
 \end{definition}
 
+\begin{lemma}
+    \begin{equation}
+        a^2 \in \R \setminus \Q \implies a \in \R \setminus \Q
+    \end{equation}
+\end{lemma}
+\begin{proof}
+    Assume $a \in \Q$, then:
+    \begin{equation}
+        \exists p,q \in \Z: a = \frac{p}{q} \implies a^2 = \frac{p^2}{q^2}
+    \end{equation}
+    Since \Z{} is closed for multiplication, $p^2,q^2 \in \Z$:
+    \begin{equation}
+        p^2,q^2 \in \Z \implies \frac{p^2}{q^2} \in \Q \implies a^2 \in \Q \quad \blitz 
+    \end{equation}
+\end{proof}
