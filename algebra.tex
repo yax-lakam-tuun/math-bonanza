@@ -1,104 +1,104 @@
 \chapter{Algebra}
 
 \begin{definition}[Groupoid]
-    A groupoid is a pair consisting of a set $S$ and a binary operation $*$.
+    A groupoid is a pair consisting of a set $S$ and a binary operation $\cdot$.
     The binary operation is defined:
     \begin{equation}
-        *: S \times S \rightarrow S \quad \forall a,b \in S: a * b \in S
+        \cdot: S \times S \rightarrow S \quad \forall a,b \in S: a \cdot b \in S
     \end{equation}
 \end{definition}
 
 \begin{definition}[Semigroup]
-    A semigroup is a groupoid with a set $S$ and a binary operation $*$.
+    A semigroup is a groupoid with a set $S$ and a binary operation $\cdot$.
     Its elements follow the law of associativity.
     It has the following properties:
     \begin{enumerate}
         \item The binary operation is defined:
             \begin{equation}
-                *: S \times S \rightarrow S \quad \forall a,b \in S: a * b \in S
+                \cdot: S \times S \rightarrow S \quad \forall a,b \in S: a \cdot b \in S
             \end{equation}
         \item Associative:
             \begin{equation}
-                \forall a,b,c \in S: a * (b * c) = (a * b) * c
+                \forall a,b,c \in S: a \cdot (b \cdot c) = (a \cdot b) \cdot c
             \end{equation} 
     \end{enumerate}
 \end{definition}
 
 \begin{definition}[Monoid]
-    A monoid is a triple $(S, *, e)$ consisting of a set $S$, a binary operation $*$ and 
+    A monoid is a triple $(S, \cdot, e)$ consisting of a set $S$, a binary operation $\cdot$ and 
     a neutral element $e \in S$.
     It is also a groupoid and has the following properties:
     \begin{enumerate}
         \item The binary operation is defined:
             \begin{equation}
-                *: S \times S \rightarrow S \quad \forall a,b \in S: a * b \in S
+                \cdot: S \times S \rightarrow S \quad \forall a,b \in S: a \cdot b \in S
             \end{equation}
         \item Associative:
             \begin{equation}
-                \forall a,b,c \in S: a * (b * c) = (a * b) * c
+                \forall a,b,c \in S: a \cdot (b \cdot c) = (a \cdot b) \cdot c
             \end{equation} 
         \item The neutral element $e \in S$:
             \begin{equation}
-                \forall a \in S: a * e = e * a = a
+                \forall a \in S: a \cdot e = e \cdot a = a
             \end{equation}
     \end{enumerate}
 \end{definition}
 
 \begin{definition}[Group]
-    A group is a monoid with triple $(S, *, e)$ consisting of a set $S$, a binary operation $*$ and 
-    a neutral element $e \in S$.
+    A group is a monoid with triple $(S, \cdot, e)$ consisting of a set $S$, 
+    a binary operation $\cdot$ and a neutral element $e \in S$.
     For each element there is an ``inverse''.
     A group has the following properties:
     \begin{enumerate}
         \item The binary operation is defined:
             \begin{equation}
-                *: S \times S \rightarrow S \quad \forall a,b \in S: a * b \in S
+                \cdot: S \times S \rightarrow S \quad \forall a,b \in S: a \cdot b \in S
             \end{equation}
         \item Associative:
             \begin{equation}
-                \forall a,b,c \in S: a * (b * c) = (a * b) * c
+                \forall a,b,c \in S: a \cdot (b \cdot c) = (a \cdot b) \cdot c
             \end{equation} 
         \item The neutral element $e \in S$:
             \begin{equation}
-                \forall a \in S: a * e = e * a = a
+                \forall a \in S: a \cdot e = e \cdot a = a
             \end{equation}
         \item The inverse element:
             \begin{equation}
-                \forall a \in S: \exists a': a * a' = e
+                \forall a \in S: \exists a': a \cdot a' = e
             \end{equation}
         \item If a group also commutative, it is called an Abelian group:
         \begin{equation}
-            \forall a,b \in S: a * b = b * a
+            \forall a,b \in S: a \cdot b = b \cdot a
         \end{equation}
     \end{enumerate}
 \end{definition}
 
 \begin{definition}[Ring]
-    A ring $R$ consists of a set $S$ and two binary operations $+$ and $*$.
+    A ring $R$ consists of a set $S$ and two binary operations $+$ and $\cdot$.
     It has the following properties:
     \begin{enumerate}
         \item $R(S,+)$ is an Abelian group.
-        \item $R(S,*)$ is a semigroup.
+        \item $R(S,\cdot)$ is a semigroup.
         \item Distributive:
             \begin{equation}
-                \forall a,b,c \in S: a * (b + c) = a * b + a * c
+                \forall a,b,c \in S: a \cdot (b + c) = a \cdot b + a \cdot c
             \end{equation}
     \end{enumerate}
-    The operator * is usually omitted, e.g. $a (b + c) = ab + ac$.
+    The operator $\cdot$ is usually omitted, e.g. $a (b + c) = ab + ac$.
 \end{definition}
 
 \begin{definition}[Field]
-    A field $F$ consists of a set $S$ and two binary operations $+$ and $*$.
+    A field $F$ consists of a set $S$ and two binary operations $+$ and $\cdot$.
     It has the following properties:
     \begin{enumerate}
         \item $F(S,+)$ is an Abelian group. Element ``0'' is the neutral element.
-        \item $F(S\setminus\{0\},*)$ is an Abelian group. Element ``1'' is the neutral element.
+        \item $F(S\setminus\{0\},\cdot)$ is an Abelian group. Element ``1'' is the neutral element.
         \item Distributive:
             \begin{equation}
-                \forall a,b,c \in S: a * (b + c) = a * b + a * c
+                \forall a,b,c \in S: a \cdot (b + c) = a \cdot b + a \cdot c
             \end{equation}
     \end{enumerate}
-    The operator * is usually omitted, e.g. $a (b + c) = ab + ac$.
+    The operator $\cdot$ is usually omitted, e.g. $a (b + c) = ab + ac$.
 \end{definition}
 
 \begin{definition}[Floor and ceiling]
@@ -142,12 +142,12 @@
 
         \item $\lfloor x + k \rfloor = \lfloor x \rfloor + k \quad k \in \Z$ \\
             Let $\lfloor x \rfloor = n$, then:
-            \begin{align*}
+            \begin{align}
                                 & n \le x < n+1 \\
                 \Leftrightarrow \quad & n+k \le x+k < n+k+1 \\
                 \Leftrightarrow \quad  & \lfloor x \rfloor + k \le x+k < \lfloor x \rfloor + k+1 \\
                 \Leftrightarrow \quad  & \lfloor x + k \rfloor = \lfloor x \rfloor + k
-            \end{align*}
+            \end{align}
     \end{enumerate}
 \end{proof}
 
@@ -167,7 +167,7 @@
 \end{corollary}
 \begin{proof}
     It is sufficient to proof just one relation, the other is analogous.
-    \begin{align*}
+    \begin{align}
         & ((a \text{ mod } n) + (b \text{ mod } n)) \text{ mod } n \\
             = \quad & a - \left\lfloor \frac{a}{n} \right\rfloor n + b - \left\lfloor \frac{b}{n} \right\rfloor n - 
                 \left\lfloor \frac{a - \left\lfloor \frac{a}{n} \right\rfloor n + b - \left\lfloor \frac{b}{n} \right\rfloor n}{n} \right\rfloor n\\
@@ -182,5 +182,5 @@
                      {n} \right\rfloor\right) n\\  
             = \quad & a + b - \left(\left\lfloor\frac{a + b}{n} \right\rfloor\right) n\\  
             = \quad & (a + b) \mod n  
-    \end{align*}
+    \end{align}
 \end{proof}
