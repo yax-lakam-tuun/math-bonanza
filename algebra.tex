@@ -173,9 +173,9 @@
         \item $\lfloor x + k \rfloor = \lfloor x \rfloor + k \quad k \in \Z$ \\
             Let $\lfloor x \rfloor = n$, then:
             \begin{align}
-                                & n \le x < n+1 \\
-                \Leftrightarrow \quad & n+k \le x+k < n+k+1 \\
-                \Leftrightarrow \quad  & \lfloor x \rfloor + k \le x+k < \lfloor x \rfloor + k+1 \\
+                                & n \le x < n+1 \nonumber \\
+                \Leftrightarrow \quad & n+k \le x+k < n+k+1 \nonumber \\
+                \Leftrightarrow \quad  & \lfloor x \rfloor + k \le x+k < \lfloor x \rfloor + k+1 \nonumber \\
                 \Leftrightarrow \quad  & \lfloor x + k \rfloor = \lfloor x \rfloor + k
             \end{align}
     \end{enumerate}
@@ -198,19 +198,19 @@
 \begin{proof}
     It is sufficient to proof just one relation, the other is analogous.
     \begin{align}
-        & ((a \text{ mod } n) + (b \text{ mod } n)) \text{ mod } n \\
+        & ((a \text{ mod } n) + (b \text{ mod } n)) \text{ mod } n \nonumber \\
             = \quad & a - \left\lfloor \frac{a}{n} \right\rfloor n + b - \left\lfloor \frac{b}{n} \right\rfloor n - 
-                \left\lfloor \frac{a - \left\lfloor \frac{a}{n} \right\rfloor n + b - \left\lfloor \frac{b}{n} \right\rfloor n}{n} \right\rfloor n\\
+                \left\lfloor \frac{a - \left\lfloor \frac{a}{n} \right\rfloor n + b - \left\lfloor \frac{b}{n} \right\rfloor n}{n} \right\rfloor n \nonumber \\
             = \quad & a + b - \left(\left\lfloor \frac{a}{n} \right\rfloor + \left\lfloor \frac{b}{n} \right\rfloor\right)n - 
-                \left\lfloor \frac{a - \left\lfloor \frac{a}{n} \right\rfloor n + b - \left\lfloor \frac{b}{n} \right\rfloor n}{n} \right\rfloor n\\ 
+                \left\lfloor \frac{a - \left\lfloor \frac{a}{n} \right\rfloor n + b - \left\lfloor \frac{b}{n} \right\rfloor n}{n} \right\rfloor n \nonumber \\ 
             = \quad & a + b - \left(\left\lfloor \frac{a}{n} \right\rfloor + \left\lfloor \frac{b}{n} \right\rfloor - 
-                \left\lfloor \frac{a - \left\lfloor \frac{a}{n} \right\rfloor n + b - \left\lfloor \frac{b}{n} \right\rfloor n}{n} \right\rfloor\right) n\\ 
+                \left\lfloor \frac{a - \left\lfloor \frac{a}{n} \right\rfloor n + b - \left\lfloor \frac{b}{n} \right\rfloor n}{n} \right\rfloor\right) n \nonumber \\ 
             = \quad & a + b - \left(\left\lfloor \left\lfloor \frac{a}{n} \right\rfloor + \left\lfloor \frac{b}{n} \right\rfloor - 
-                \frac{a - \left\lfloor \frac{a}{n} \right\rfloor n + b - \left\lfloor \frac{b}{n} \right\rfloor n}{n} \right\rfloor\right) n\\
+                \frac{a - \left\lfloor \frac{a}{n} \right\rfloor n + b - \left\lfloor \frac{b}{n} \right\rfloor n}{n} \right\rfloor\right) n \nonumber \\
             = \quad & a + b - \left(\left\lfloor
                 \frac{\left\lfloor \frac{a}{n} \right\rfloor n + \left\lfloor \frac{b}{n} \right\rfloor n + a - \left\lfloor \frac{a}{n} \right\rfloor n + b - \left\lfloor \frac{b}{n} \right\rfloor n}
-                     {n} \right\rfloor\right) n\\  
-            = \quad & a + b - \left(\left\lfloor\frac{a + b}{n} \right\rfloor\right) n\\  
+                     {n} \right\rfloor\right) n \nonumber \\  
+            = \quad & a + b - \left(\left\lfloor\frac{a + b}{n} \right\rfloor\right) n \nonumber \\  
             = \quad & (a + b) \mod n  
     \end{align}
 \end{proof}
