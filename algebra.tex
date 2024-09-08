@@ -101,6 +101,36 @@
     The operator $\cdot$ is usually omitted, e.g. $a (b + c) = ab + ac$.
 \end{definition}
 
+\begin{lemma}
+    Let $F$ be a field, then the following equations are valid:
+    \begin{enumerate}
+        \item $\forall a \in F: 0 \cdot a = 0$
+        \item $\forall a,b \in F: -((-a) \cdot b) = -(a \cdot (-b)) = a \cdot b$
+        \item $\forall a,b \in F: (-a) \cdot (-b) = a \cdot b$
+    \end{enumerate}
+\end{lemma}
+\begin{proof}
+    \begin{enumerate}
+        \item $\forall a \in F: 0 \cdot a = 0$
+        \begin{align}
+                                  & 0 \cdot a = (0 + 0) \cdot a = 0 \cdot a + 0 \cdot a \nonumber \\
+            \Leftrightarrow \quad & 0 \cdot a = 0 \cdot a + 0 \cdot a \nonumber \\
+            \Leftrightarrow \quad & 0 \cdot a + 0 \cdot a = 0 \cdot a  \quad | - 0 \cdot a \nonumber \\
+            \Leftrightarrow \quad & 0 \cdot a = 0 
+        \end{align}
+        \item $\forall a,b \in F: -((-a) \cdot b) = -(a \cdot (-b)) = a \cdot b$
+        \begin{align}
+            & a \cdot b + (-a) \cdot b = (a + (-a)) \cdot b = (0 + 0) \cdot b = 0 \nonumber \\
+            \Leftrightarrow \quad & -((-a) \cdot b) = a \cdot b
+        \end{align}
+        \item $\forall a,b \in F: (-a) \cdot (-b) = a \cdot b$
+        \begin{align}
+            & (-a) \cdot b + (-a) \cdot (-b) = (-a) \cdot (b + (-b)) = (-a) \cdot (0 + 0) = 0 \nonumber \\
+            \Leftrightarrow \quad & -((-a) \cdot b) = (-a) \cdot (-b) = a \cdot b
+        \end{align}
+    \end{enumerate}
+\end{proof}
+
 \begin{definition}[Floor and ceiling]
     Let $x \in \R$, then choose $m,n \in \Z$ so that:
     \begin{equation}
