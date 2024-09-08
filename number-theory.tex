@@ -14,13 +14,122 @@
     \end{equation}
 \end{definition}
 
-\begin{definition}[Integers]
-    Integers are the set of all positive natural numbers, negative numbers and the number zero.
-    The symbol \Z{} is used to denote them.
+\begin{definition}[Natural numbers via Peano axioms]
+    The successor of a given number $n$ is denoted as $S(n)$.
+    \begin{enumerate}
+        \item 1 is the first natural number
+        \item $n \in \N \implies S(n) \ne 0$
+        \item $\forall n \in \N \implies S(n) \in \N$
+        \item $\forall n,m \in \N: S(n) = S(m) \implies n=m$
+        \item $\forall X: 1 \in X \land \forall n \in X \land S(n) \in X \implies \N \subseteq X$
+    \end{enumerate}
+    Please note: The natural numbers do not include zero here. 
+    It might be defined different elsewhere.
+\end{definition}
+
+\begin{corollary}
+    When the natural numbers defined Peano axioms are extended by 0,
+    it is $S(0)=1$.
+\end{corollary}
+
+\begin{definition}[Addition in \Nzero]
+    Addition in \Nzero{} can be defined as:
     \begin{equation}
-        \Z = \{...,-3,-2,-1,0,1,2,3,... \}
+        \forall n,m \in \Nzero: n+0:=n \quad \land \quad n + S(m) := S(n + m)
     \end{equation}
 \end{definition}
+
+\begin{corollary}
+    It can easily be seen, that the successor can be derived from addition:
+    \begin{equation}
+        S(n+0) = n + S(0)  \quad \Leftrightarrow \quad S(n) = n + 1
+    \end{equation}
+\end{corollary}
+
+\begin{theorem}[The naturual numbers are closed under addition]
+    \begin{equation}
+        \forall n,m \in \Nzero: n + m \in \Nzero
+    \end{equation}
+\end{theorem}
+\begin{proof}
+    Proof is given by mathematical induction.
+    Let $a,n \in \Nzero$:
+
+    \emph{Base case:} For n = 1 that's clearly true.
+    \begin{equation}
+        a + n = a + 1 = a + S(0) \in \Nzero \quad \text{(see Peano axioms)}
+    \end{equation}
+
+    \emph{Induction requirement}: The equation is valid for n: $a + n \in \Nzero$.
+    
+    \emph{Induction step:} 
+    \begin{equation}
+        a + S(n) = a + (n + 1) = (a + n) + 1 = (a + n) + S(0) \in \Nzero
+    \end{equation}
+\end{proof}
+
+\begin{definition}[Multiplication in \Nzero]
+    Multiplication in \Nzero{} can be defined as:
+    \begin{equation}
+        \forall n,m \in \Nzero: n \cdot 0:=0 \quad \land \quad n \cdot S(m) := n + (n \cdot m)
+    \end{equation}
+\end{definition}
+
+\begin{corollary}
+    It can easily be seen, that the successor of zero is the multiplicative identity:
+    \begin{equation}
+        \forall n \in \Nzero: n \cdot S(0) = n + (n \cdot 0) = n
+    \end{equation}
+\end{corollary}
+
+\begin{theorem}[The naturual numbers are closed under multiplication]
+    \begin{equation}
+        \forall n,m \in \Nzero: n \cdot m \in \Nzero
+    \end{equation}
+\end{theorem}
+\begin{proof}
+    Proof is given by mathematical induction.
+    Let $a,n \in \Nzero$:
+
+    \emph{Base case:} For n = 1 that's clearly true.
+    \begin{equation}
+        a \cdot n = a \cdot 1 = a \in \Nzero
+    \end{equation}
+
+    \emph{Induction requirement}: The equation is valid for n: $a \cdot n \in \Nzero$.
+    
+    \emph{Induction step:} 
+    \begin{equation}
+        a \cdot S(n) = a \cdot (n + 1) = a + (a \cdot n)
+    \end{equation}
+    Since natural numbers are closed under addition and 
+    $a \cdot n \in \Nzero \implies a + (a \cdot n) \in \Nzero$
+\end{proof}
+
+\begin{definition}[Negative integers]
+    Negative integers are defined as the additive inverse of natural numbers.
+    The minus sign is used to denote the additive inverse of a given natural number,
+    \begin{equation}
+        \forall a \in \N: \exists -a: a + (-a) = 0
+    \end{equation}
+    The symbol \Nminus{} is used to denote them.
+    \begin{equation}
+        \Nminus = \{-1, -2, -3, -4, ... \}
+    \end{equation}
+\end{definition}
+
+\begin{definition}[Integers]
+    Integers are the set of all positive natural integers, negative integers and the number zero.
+    \begin{equation}
+        \Z = \N \cup \Nminus \cup \{0 \} =  \{...,-3,-2,-1,0,1,2,3,... \}
+    \end{equation}
+    The symbol \Z{} is used to denote them.
+\end{definition}
+
+\begin{corollary}
+    The integers \Z{} are closed under addition and multiplication.
+    The proof is similar to the one shown for natural numbers by applying mathematical induction. 
+\end{corollary}
 
 \begin{definition}[Rational numbers]
     Rational numbers is the set of all fractions.
