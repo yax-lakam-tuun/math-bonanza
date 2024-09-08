@@ -74,11 +74,11 @@
 \end{definition}
 
 \begin{definition}[Ring]
-    A ring $R$ consists of a set $S$ and two binary operations $+$ and $\cdot$.
+    A ring $(R,+,\cdot )$ consists of a set $R$ and two binary operations $+$ and $\cdot$.
     It has the following properties:
     \begin{enumerate}
-        \item $R(S,+)$ is an Abelian group.
-        \item $R(S,\cdot)$ is a semigroup.
+        \item $(R,+)$ is an Abelian group.
+        \item $(R,\cdot)$ is a semigroup.
         \item Distributive:
             \begin{equation}
                 \forall a,b,c \in S: a \cdot (b + c) = a \cdot b + a \cdot c
@@ -88,14 +88,14 @@
 \end{definition}
 
 \begin{definition}[Field]
-    A field $F$ consists of a set $S$ and two binary operations $+$ and $\cdot$.
+    A field consists of a set $F$ and two binary operations $+$ and $\cdot$.
     It has the following properties:
     \begin{enumerate}
-        \item $F(S,+)$ is an Abelian group. Element ``0'' is the neutral element.
-        \item $F(S\setminus\{0\},\cdot)$ is an Abelian group. Element ``1'' is the neutral element.
+        \item $(F,+)$ is an Abelian group. Element ``0'' is the neutral element.
+        \item $(F\setminus\{0\},\cdot)$ is an Abelian group. Element ``1'' is the neutral element.
         \item Distributive:
             \begin{equation}
-                \forall a,b,c \in S: a \cdot (b + c) = a \cdot b + a \cdot c
+                \forall a,b,c \in F: a \cdot (b + c) = a \cdot b + a \cdot c
             \end{equation}
     \end{enumerate}
     The operator $\cdot$ is usually omitted, e.g. $a (b + c) = ab + ac$.
